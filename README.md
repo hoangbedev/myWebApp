@@ -1,121 +1,164 @@
-# myWebApp
-# PHP Programming
-## Chương 1: Giới thiệu về PHP và Laravel
-### Khoá học Coursera – Khóa 1 – Module 1
+# **PhP programming**
+## Chương 1: Giới thiệu về PHP và Lavravel khóa Coursera (Khóa 1)
+https://www.coursera.org/learn/laravel-framework-and-php/home/module/1
+### 1.1 Giới thiệu PHP 
+- PHP viết tắt của Hypertext Preprocessor.
+- Là ngôn ngữ lập trình kịch bản (scripting language) phía máy chủ (server-side).
+- Được dùng chủ yếu để tạo và phát triển các ứng dụng web động (dynamic websites).
 
-### 1.1 Giới thiệu về PHP
+### 1.2 Cú pháp PHP
+Mã PHP được đặt trong cặp thẻ như sau:
+```
+<?php
 
-PHP (viết tắt của Hypertext Preprocessor) là một ngôn ngữ lập trình kịch bản mã nguồn mở, chuyên dùng để phát triển các ứng dụng web động.
+```
 
-PHP có thể được nhúng trực tiếp vào các tệp HTML.
+Khai báo biến
 
-Được tạo bởi Rasmus Lerdorf vào năm 1994.
++ Biến bắt đầu với ký hiệu $, ví dụ: $ten = "phenikaa";
++ Câu lệnh kết thúc bằng dấu ;
 
-Hiện nay là một trong những ngôn ngữ phổ biến nhất để xây dựng trang web.
+```
+$ten = "Phenikaa";
+```
 
-### 1.2 Cú pháp cơ bản trong PHP
 
-Mã PHP được đặt giữa thẻ <?php ... ?>.
 
-Mỗi câu lệnh kết thúc bằng dấu chấm phẩy ;.
+Chú thích:
 
-### Biến
++ Một dòng: // đây là chú thích
 
-Bắt đầu bằng ký tự $.
++ Nhiều dòng: /* chú thích nhiều dòng */
 
-Ví dụ:
-<pre>$ten = "PHP";</pre>
-
-### Ghi chú (Comments)
-
-Ghi chú một dòng: //
-
-Ghi chú nhiều dòng:
-<pre> 
-/* Ghi chú
-   nhiều dòng */
-</pre>
-### Phân biệt chữ hoa/thường
-
-Tên biến: phân biệt chữ hoa/thường (<pre>$Name</pre> khác <pre>$name</pre>).
-
-Từ khóa, hàm, class: không phân biệt chữ hoa/thường.
+  ```
+  //đây là chú thích một dòng
+  /*
+   * đây là chú thích nhiều dòng
+   */
+  
+  ```
 
 ### 1.3 Cấu trúc điều khiển
+PHP hỗ trợ đầy đủ các cấu trúc điều khiển như các ngôn ngữ lập trình phổ biến khác:
 
-### Câu lệnh điều kiện
+#### if .. elseif ...else
 
-if, else, elseif: thực hiện các nhánh mã dựa trên điều kiện.
+Câu lệnh điều kiện: 
 
-switch: chọn một trong nhiều trường hợp để thực thi.
+```
+if ($tuoi >= 18)
+  { echo "Đã đủ tuổi."; }
+elseif ($tuoi == 17)
+  { echo "Gần đủ tuổi."; }
+else
+  { echo "Chưa đủ tuổi."; }
 
-Ví dụ:
-<pre>
-$diem = 8;
-if ($diem >= 9) {
-    echo "Xuất sắc!";
-} elseif ($diem >= 7) {
-    echo "Giỏi!";
-} else {
-    echo "Cố gắng hơn nhé!";
+```
+#### Loop : For / while /do...while
+
+Câu lệnh lặp: // for 
+```
+for ($i = 0; $i < 5; $i++)
+    { echo $i; }
+
+```
+
+// while
+
+```
+
+while $i = 0;
+while ($i < 5)
+{
+  echo $i;
+  $i++;
 }
-</pre>
 
-### Vòng lặp
+```
 
-for: lặp với số lần xác định.
+// do...while
+```
 
-while: lặp khi điều kiện còn đúng.
 
-do...while: thực hiện ít nhất một lần trước khi kiểm tra điều kiện.
-
-foreach: lặp qua từng phần tử trong mảng.
-
-Ví dụ:
-<pre>
-for ($i = 1; $i <= 5; $i++) {
-    echo "Dòng thứ $i<br>";
+$i = 0;
+do {
+  echo $i;
+  $i++;
 }
-</pre>
+while ($i < 5);
+
+```
+
+//Re nhanh switch..case
+
+
+switch...case: 
+```
+$ngay = "thu hai";
+switch ($ngay)
+{ case "thu hai":
+  echo "Hôm nay là đầu tuần.";
+  break;
+
+  case "thu ba":
+  echo "Hôm nay là thứ 3.";
+  break;
+
+  default: echo "Không rõ ngày.";
+}
+
+```
 ### 1.4 Hàm trong PHP
 
-Dùng để đóng gói các khối mã lặp lại, dễ bảo trì và tái sử dụng.
++ Giống Methods trong Class
++ Hàm là khối mã thực hiện một nhiệm vụ cụ thể, tái sử dụng.
 
-Cú pháp:
-<pre>
-function tenHam($thamSo) {
-    return $giaTri;
+Ví dụ: 
+```
+function chao($ten)
+{
+   return "Xin chào, " . $ten;
+
 }
-</pre>
 
-Gọi hàm:
-<pre>
-tenHam("giá trị");
-</pre>
-### 1.5 Vai trò của PHP trong phát triển ứng dụng web
+```
 
-PHP hoạt động như một ngôn ngữ lập trình phía máy chủ (server-side), xử lý logic và dữ liệu trước khi gửi kết quả ra trình duyệt người dùng dưới dạng HTML.
+echo chao("Minh");
 
-### Các vai trò chính của PHP:
+Đặc điểm:
 
-Tạo nội dung động trên trang web.
++ Có thể có hoặc không tham số.
 
-Xử lý biểu mẫu HTML (form): đăng ký, đăng nhập,...
++ Có thể trả về giá trị bằng return.
 
-Kết nối và thao tác với cơ sở dữ liệu (MySQL, PostgreSQL,...).
+PHP cũng hỗ trợ hàm ẩn danh (anonymous functions) và các hàm callback.
 
-Quản lý phiên (session): lưu thông tin người dùng.
+### 1.5 Vai trò của PHP trong phát triển ứng dụng Web
+PHP giữ vai trò cốt lõi trong lập trình web phía server, cụ thể:
 
-Tạo API để giao tiếp với các hệ thống khác.
+Xử lý dữ liệu từ biểu mẫu (form) người dùng.
 
-PHP được sử dụng bởi nhiều nền tảng lớn như WordPress, Facebook, Wikipedia,...
+Kết nối và thao tác với cơ sở dữ liệu.
 
-### 1.6 Laravel – Giới thiệu sơ lược
+Control/Điều khiển nôi dung động (dynamic content) từ CSDL về View hoặc từ View về Model (CSDL).
 
-Laravel là một framework PHP hiện đại, được thiết kế để giúp lập trình viên phát triển ứng dụng web nhanh chóng và hiệu quả.
+Xử lý các nghiệp vụ phát triển phần mềm: 
+Ví dụ: 
 
-Áp dụng mô hình MVC (Model - View - Controller).
++ Xử lý xác thực, định dạnh và phần quyền người dùng (login, register).
++ CRUD
++ Phân tích xử lý nghiệp vụ doanh nghiệp (business logic)
 
-Cung cấp sẵn các chức năng như: routing, session, authentication, validation, Blade template, Artisan CLI,...
+Tích hợp dễ dàng với các framework Frontend, HTML, CSS, JavaScript.
 
-Tối ưu cho bảo trì mã nguồn và mở rộng hệ thống.
+Tạo API hoặc làm việc với JSON, XML.
+
+PHP thường được sử dụng để xây dựng các hệ thống như:
+
+Website thương mại điện tử
+
+Hệ quản trị nội dung (CMS) như WordPress, Joomla
+
+Diễn đàn (forums), mạng xã hội
+
+Web service, RESTful API
