@@ -19,38 +19,38 @@ Mã PHP được đặt giữa thẻ <?php ... ?>.
 
 Mỗi câu lệnh kết thúc bằng dấu chấm phẩy ;.
 
-Biến
+### Biến
 
 Bắt đầu bằng ký tự $.
 
-Ví dụ: $ten = "PHP";
+Ví dụ:
+<pre>$ten = "PHP";</pre>
 
-Ghi chú (Comments)
+### Ghi chú (Comments)
 
 Ghi chú một dòng: //
 
 Ghi chú nhiều dòng:
-
+<pre> 
 /* Ghi chú
    nhiều dòng */
+</pre>
+### Phân biệt chữ hoa/thường
 
-
-Phân biệt chữ hoa/thường
-
-Tên biến: phân biệt chữ hoa/thường ($Name khác $name).
+Tên biến: phân biệt chữ hoa/thường (<pre>$Name</pre> khác <pre>$name</pre>).
 
 Từ khóa, hàm, class: không phân biệt chữ hoa/thường.
 
 ### 1.3 Cấu trúc điều khiển
 
-Câu lệnh điều kiện
+### Câu lệnh điều kiện
 
 if, else, elseif: thực hiện các nhánh mã dựa trên điều kiện.
 
 switch: chọn một trong nhiều trường hợp để thực thi.
 
 Ví dụ:
-
+<pre>
 $diem = 8;
 if ($diem >= 9) {
     echo "Xuất sắc!";
@@ -59,9 +59,9 @@ if ($diem >= 9) {
 } else {
     echo "Cố gắng hơn nhé!";
 }
+</pre>
 
-
-Vòng lặp
+### Vòng lặp
 
 for: lặp với số lần xác định.
 
@@ -72,31 +72,31 @@ do...while: thực hiện ít nhất một lần trước khi kiểm tra điều
 foreach: lặp qua từng phần tử trong mảng.
 
 Ví dụ:
-
+<pre>
 for ($i = 1; $i <= 5; $i++) {
     echo "Dòng thứ $i<br>";
 }
-
+</pre>
 ### 1.4 Hàm trong PHP
 
 Dùng để đóng gói các khối mã lặp lại, dễ bảo trì và tái sử dụng.
 
 Cú pháp:
-
+<pre>
 function tenHam($thamSo) {
     return $giaTri;
 }
-
+</pre>
 
 Gọi hàm:
-
+<pre>
 tenHam("giá trị");
-
+</pre>
 ### 1.5 Vai trò của PHP trong phát triển ứng dụng web
 
 PHP hoạt động như một ngôn ngữ lập trình phía máy chủ (server-side), xử lý logic và dữ liệu trước khi gửi kết quả ra trình duyệt người dùng dưới dạng HTML.
 
-Các vai trò chính của PHP:
+### Các vai trò chính của PHP:
 
 Tạo nội dung động trên trang web.
 
