@@ -1,10 +1,9 @@
 # myWebApp
-PHP Programming
-Chương 1: Giới thiệu về PHP và Laravel
+# PHP Programming
+## Chương 1: Giới thiệu về PHP và Laravel
+### Khoá học Coursera – Khóa 1 – Module 1
 
-Nguồn: Khoá học Coursera – Khóa 1 – Module 1
-
-1.1 Giới thiệu về PHP
+### 1.1 Giới thiệu về PHP
 
 PHP (viết tắt của Hypertext Preprocessor) là một ngôn ngữ lập trình kịch bản mã nguồn mở, chuyên dùng để phát triển các ứng dụng web động.
 
@@ -14,7 +13,7 @@ PHP có thể được nhúng trực tiếp vào các tệp HTML.
 
 Hiện nay là một trong những ngôn ngữ phổ biến nhất để xây dựng trang web.
 
-1.2 Cú pháp cơ bản trong PHP
+### 1.2 Cú pháp cơ bản trong PHP
 
 Mã PHP được đặt giữa thẻ <?php ... ?>.
 
@@ -42,7 +41,7 @@ Tên biến: phân biệt chữ hoa/thường ($Name khác $name).
 
 Từ khóa, hàm, class: không phân biệt chữ hoa/thường.
 
-1.3 Cấu trúc điều khiển
+### 1.3 Cấu trúc điều khiển
 
 Câu lệnh điều kiện
 
@@ -78,7 +77,7 @@ for ($i = 1; $i <= 5; $i++) {
     echo "Dòng thứ $i<br>";
 }
 
-1.4 Hàm trong PHP
+### 1.4 Hàm trong PHP
 
 Dùng để đóng gói các khối mã lặp lại, dễ bảo trì và tái sử dụng.
 
@@ -93,7 +92,7 @@ Gọi hàm:
 
 tenHam("giá trị");
 
-1.5 Vai trò của PHP trong phát triển ứng dụng web
+### 1.5 Vai trò của PHP trong phát triển ứng dụng web
 
 PHP hoạt động như một ngôn ngữ lập trình phía máy chủ (server-side), xử lý logic và dữ liệu trước khi gửi kết quả ra trình duyệt người dùng dưới dạng HTML.
 
@@ -111,7 +110,7 @@ Tạo API để giao tiếp với các hệ thống khác.
 
 PHP được sử dụng bởi nhiều nền tảng lớn như WordPress, Facebook, Wikipedia,...
 
-1.6 Laravel – Giới thiệu sơ lược
+### 1.6 Laravel – Giới thiệu sơ lược
 
 Laravel là một framework PHP hiện đại, được thiết kế để giúp lập trình viên phát triển ứng dụng web nhanh chóng và hiệu quả.
 
