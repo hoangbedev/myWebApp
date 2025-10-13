@@ -1,0 +1,25 @@
+# Composer / PHP
+/vendor
+/.idea
+/.vscode
+.env
+.phpunit.result.cache
+
+# Node
+/node_modules
+/npm-debug.log
+/yarn-error.log
+/dist
+/public/hot
+/public/storage
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Laravel
+/storage/*.key
+/storage/debugbar
+/storage/*.csv
+/storage/*.sqlite
+/bootstrap/cache/*.php
